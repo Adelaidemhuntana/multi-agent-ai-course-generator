@@ -2,6 +2,33 @@
 
 A multi-agent system built with Google's Agent Development Kit (ADK) and Agent-to-Agent (A2A) protocol. It features a team of microservice agents that research, judge, and build content, orchestrated to deliver high-quality results.
 
+## Demo
+
+### Demo Video
+👉 [Watch the demo video](https://drive.google.com/file/d/1gOWz8M4U2LEBtfNJj5R5CbEuApV3tPhi/view?usp=sharing)
+
+
+## System Diagram
+
+```mermaid
+flowchart TD
+    User[User enters course topic] --> App[Frontend App<br/>Port 8000]
+
+    App --> Orchestrator[Orchestrator Agent<br/>Port 8004]
+
+    Orchestrator --> Researcher[Researcher Agent<br/>Port 8001<br/>Gathers information]
+    Researcher --> Orchestrator
+
+    Orchestrator --> Judge[Judge Agent<br/>Port 8002<br/>Checks quality]
+    Judge --> Orchestrator
+
+    Orchestrator --> ContentBuilder[Content Builder Agent<br/>Port 8003<br/>Builds final course]
+    ContentBuilder --> Orchestrator
+
+    Orchestrator --> App
+    App --> Output[Generated Course Output]
+
+
 ## Architecture
 
 This project uses a distributed microservices architecture where each agent runs in its own container and communicates via A2A:
