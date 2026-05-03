@@ -13,7 +13,6 @@ A multi-agent system built with Google's Agent Development Kit (ADK) and Agent-t
 ```mermaid
 flowchart TD
     User[User enters course topic] --> App[Frontend App<br/>Port 8000]
-
     App --> Orchestrator[Orchestrator Agent<br/>Port 8004]
 
     Orchestrator --> Researcher[Researcher Agent<br/>Port 8001<br/>Gathers information]
@@ -27,7 +26,7 @@ flowchart TD
 
     Orchestrator --> App
     App --> Output[Generated Course Output]
-
+```
 
 ## Architecture
 
