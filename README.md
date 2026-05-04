@@ -88,7 +88,7 @@ To avoid duplication, these files are linked into respective subdirectories as [
     This will start all 4 agents and the web app in background processes
 
 4.  **Access the App:**
-    Open **http://localhost:8000** in your browser.
+    Open **https://course-creator-870791300368.us-west1.run.app** in your browser.
 
 ## Deployment
 
